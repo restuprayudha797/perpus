@@ -10,22 +10,18 @@
         </div>
     </div>
     <ul id="dc_accordion" class="sidebar-menu tree">
-        <li class="menu_sub active">
-            <a href="#"> <i class="fa fa-home"></i> <span>Dashboard</span> <span class="arrow"></span> </a>
-            <ul class="down_menu">
-                <li>
-                    <a href="index.html">Dashboard 1</a>
-                </li>
-            </ul>
+        <li class="menu_sub">
+            <a href="<?= base_url('dashboard') ?>"> <i class="fa fa-home"></i> <span>Dashboard</span></a>
+           
         </li>
         <li class="menu_sub">
             <a href="#"> <i class="fa fa-list-ul"></i> <span>Master Data </span> <span class="arrow"></span> </a>
             <ul class="down_menu">
                 <li>
-                    <a href="widgets-base.html">Data Jurusan</a>
+                    <a href="<?= base_url('jurusan') ?>">Data Jurusan</a>
                 </li>
                 <li>
-                    <a href="widgets-chart.html">Data Kelas</a>
+                    <a href="<?= base_url('kelas') ?>">Data Kelas</a>
                 </li>
                 <li>
                     <a href="widgets-base.html">Data Siswa</a>

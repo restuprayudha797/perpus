@@ -53,7 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route = [
     'login' => 'auth',
-  
+    'jurusan' => 'major',
+    'kelas' => 'class'
 ];
 
 
