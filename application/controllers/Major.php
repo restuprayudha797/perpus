@@ -1,20 +1,47 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Major extends CI_Controller {
+class Major extends CI_Controller
+{
+
+	public function __construct()
+	{
+		parent::__construct();
+
+
+		$this->load->model('Major_model', 'mm');
+	}
 
 	public function index()
 	{
-		$data['title'] = 'Major';
-		$this->load->view('src/layout/header', $data);	
-		$this->load->view('src/layout/topbar', $data);
-		$this->load->view('src/layout/sidebar');	
-		$this->load->view('src/masterdata/major');
-		$this->load->view('src/layout/footer');			
+
+		$majorData = $this->mm->getAllMajor();
+		$data = [
+			"page" => 'masterdata/index',
+			"title" => 'Jurusan',
+			"majorData" => $majorData
+		];
+
+
+		$this->load->view('index', $data);
 	}
 
-}
+	public function addMajor()
+	{
 
-/* End of file Major.php */
-/* Location: ./application/controllers/Major.php */
- ?>
+		$data = [
+			'major_name' => $this->input->post('major_name'),
+			'major_code' => $this->input->post('major_code'),
+		];
+
+		$insert = $this->db->insert('major', $data);
+		if ($insert) {
+
+			$majorData = $this->db->get('major')->result_array();
+			header('Content-Type: application/json');
+			echo json_encode($majorData);
+		}else{
+			echo 'gagal';
+		}
+	}
+}

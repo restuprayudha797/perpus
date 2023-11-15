@@ -33,3 +33,6 @@
     <script type="text/javascript" src="<?= base_url('assets') ?>/js/index/echarts/init-echarts.js"></script>
     <script type="text/javascript" src="<?= base_url('assets') ?>/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="<?= base_url('assets') ?>/js/custom.js" type="text/javascript"></script>
+<!--datatables-->
+<script src="<?= base_url('assets') ?>/js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url('assets') ?>/js/dataTables.bootstrap4.min.js"></script>
