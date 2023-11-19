@@ -72,14 +72,14 @@
 					console.error("Error fetching data: " + error);
 				}
 			});
-		}else{
+		} else {
 
 			Swal.fire({
-						icon: "error",
-						title: "Nama Jurusan Dan Singkatan Jurusan Tidak Boleh Kosong!",
-						showConfirmButton: false,
-						timer: 2000
-					});
+				icon: "error",
+				title: "Nama Jurusan Dan Singkatan Jurusan Tidak Boleh Kosong!",
+				showConfirmButton: false,
+				timer: 2000
+			});
 
 		}
 		document.getElementById('major_name').value = '';
